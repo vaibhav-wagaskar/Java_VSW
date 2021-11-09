@@ -130,7 +130,7 @@ public class UnsignedXrayClient {
         try {
             connection.setRequestMethod("POST");
         } catch (ProtocolException e) {
-            throw new IllegalStateException("Invalid protocol, can't happen.");
+            throw new IllegalStateException("Invalid protocol, can't happen."+e.getMessage(), e);
         }
 
         connection.addRequestProperty("Content-Type", "application/json");
