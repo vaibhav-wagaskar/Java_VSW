@@ -21,7 +21,7 @@ public class DependencyFactory {
      * @return an instance of ${serviceClientClassName}
      */
     public static ${serviceClientClassName} ${serviceClientVariable}Client() {
-        return ${serviceClientClassName}.builder()
+        return ${serviceClientClassName}builder()
                        .credentialsProvider(EnvironmentVariableCredentialsProvider.create())
 #if ($region == 'null')
                        .region(Region.of(System.getenv(SdkSystemSetting.AWS_REGION.environmentVariable())))
